@@ -1,0 +1,45 @@
+\BOOKMARK [1][-]{section.1}{The mode}{}% 1
+\BOOKMARK [1][-]{section.2}{A lot of time spent on...}{}% 2
+\BOOKMARK [1][-]{section.3}{Main run}{}% 3
+\BOOKMARK [1][-]{section.4}{Ablations}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{One GRU layer instead of three}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Remove weights from cross entropy}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Remove abs from the sinc layer}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Zero weight decay}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Conv HPs as in the old paper}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.6}{Non-zero min\137low\137hz, min\137band\137hz}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Another sinc layer type}{}% 11
+\BOOKMARK [1][-]{section.6}{Full description of new and modified code}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{hw\137code/collate\137fn/collate.py}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{hw\137code/datasets/\137\137init\137\137.py}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{hw\137code/losses/\137\137init\137\137.py}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.4}{hw\137code/model/\137\137init\137\137.py}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.5}{hw\137code/utils/object\137loading.py}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.6}{hw\137code/utils/trainer/\137\137init\137\137.py}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.7}{hw\137code/config/config.json}{section.6}% 19
+\BOOKMARK [3][-]{subsubsection.6.7.1}{Changes in top-level keys}{subsection.6.7}% 20
+\BOOKMARK [3][-]{subsubsection.6.7.2}{Changes in model configuration}{subsection.6.7}% 21
+\BOOKMARK [3][-]{subsubsection.6.7.3}{Changes in model arguments}{subsection.6.7}% 22
+\BOOKMARK [3][-]{subsubsection.6.7.4}{Changes in training configuration}{subsection.6.7}% 23
+\BOOKMARK [3][-]{subsubsection.6.7.5}{Changes in training dataset configuration}{subsection.6.7}% 24
+\BOOKMARK [3][-]{subsubsection.6.7.6}{Changes in validation configuration}{subsection.6.7}% 25
+\BOOKMARK [3][-]{subsubsection.6.7.7}{Changes in validation dataset configuration}{subsection.6.7}% 26
+\BOOKMARK [3][-]{subsubsection.6.7.8}{Changes in test configuration}{subsection.6.7}% 27
+\BOOKMARK [3][-]{subsubsection.6.7.9}{Changes in test dataset configuration}{subsection.6.7}% 28
+\BOOKMARK [3][-]{subsubsection.6.7.10}{Changes in optimizer configuration}{subsection.6.7}% 29
+\BOOKMARK [3][-]{subsubsection.6.7.11}{Changes in learning rate scheduler configuration}{subsection.6.7}% 30
+\BOOKMARK [3][-]{subsubsection.6.7.12}{Changes in trainer configuration}{subsection.6.7}% 31
+\BOOKMARK [3][-]{subsubsection.6.7.13}{Changes in WandB configuration}{subsection.6.7}% 32
+\BOOKMARK [2][-]{subsection.6.8}{ASTrainer class description}{section.6}% 33
+\BOOKMARK [3][-]{subsubsection.6.8.1}{Constructor \(\137\137init\137\137\)}{subsection.6.8}% 34
+\BOOKMARK [3][-]{subsubsection.6.8.2}{Helper Methods}{subsection.6.8}% 35
+\BOOKMARK [3][-]{subsubsection.6.8.3}{Training Methods}{subsection.6.8}% 36
+\BOOKMARK [3][-]{subsubsection.6.8.4}{Training Process}{subsection.6.8}% 37
+\BOOKMARK [2][-]{subsection.6.9}{ASVspoof Loss Function Description}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.10}{ASVSpoofDataset Class Description}{section.6}% 39
+\BOOKMARK [3][-]{subsubsection.6.10.1}{Constructor \(\137\137init\137\137\)}{subsection.6.10}% 40
+\BOOKMARK [3][-]{subsubsection.6.10.2}{Methods}{subsection.6.10}% 41
+\BOOKMARK [2][-]{subsection.6.11}{hw\137code/model/hw5as/\137\137init\137\137.py: empty file}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.12}{SincConvEpic Class Description}{section.6}% 43
+\BOOKMARK [3][-]{subsubsection.6.12.1}{Constructor \(\137\137init\137\137\)}{subsection.6.12}% 44
+\BOOKMARK [3][-]{subsubsection.6.12.2}{Methods}{subsection.6.12}% 45
