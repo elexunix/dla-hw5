@@ -1,0 +1,97 @@
+{
+  "name": "default_config",
+  "n_gpu": 1,
+  "preprocessing": {
+    "sr": 16000,
+    "spectrogram": {
+      "type": "MelSpectrogram",
+      "args": {
+      }
+    },
+    "log_spec": true
+  },
+  "augmentations": {
+    "wave": [],
+    "spectrogram": []
+  },
+  "arch": {
+    "type": "RawNet2Model",
+    "args": {
+    }
+  },
+  "data": {
+    "train": {
+      "batch_size": 32,
+      "num_workers": 0,
+      "datasets": [
+       {
+          "type": "ASVSpoofDataset",
+          "args": {
+            "part": "train",
+            "segment_size": 64000
+          }
+        }
+      ]
+    },
+    "valid": {
+      "batch_size": 256,
+      "num_workers": 0,
+      "datasets": [
+        {
+          "type": "ASVSpoofDataset",
+          "args": {
+            "part": "valid",
+            "max_size": 4096,
+            "segment_size": 64000
+          }
+        }
+      ]
+    },
+    "test": {
+      "batch_size": 256,
+      "num_workers": 0,
+      "datasets": [
+        {
+          "type": "ASVSpoofDataset",
+          "args": {
+            "part": "test",
+            "max_size": 4096,
+            "segment_size": 64000
+          }
+        }
+      ]
+    }
+  },
+  "optimizer": {
+    "type": "Adam",
+    "args": {
+      "lr": 1e-4,
+      "weight_decay": 1e-4
+    }
+  },
+  "loss": {
+    "type": "RawNetLoss",
+    "args": {}
+  },
+  "metrics": [
+  ],
+  "lr_scheduler": {
+    "type": "ExponentialLR",
+    "args": {
+      "gamma": 1
+    }
+  },
+  "trainer": {
+    "epochs": 300,
+    "log_interval": 200,
+    "save_dir": "saved/",
+    "save_period": 5,
+    "verbosity": 2,
+    "monitor": "min valid_loss",
+    "early_stop": 100,
+    "visualize": "wandb",
+    "wandb_project": "as_project",
+    "len_epoch": 2000,
+    "grad_norm_clip": 10
+  }
+}
